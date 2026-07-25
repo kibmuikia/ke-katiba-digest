@@ -1,0 +1,5 @@
+data/*.log
+data/*.md
+output/
+.vscode/
+*.log
