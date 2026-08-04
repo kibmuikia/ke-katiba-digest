@@ -1,6 +1,26 @@
-# ke-katiba-digest
+<p align="center">
+  <img src="data/ke_katiba_digest--logo-v1-e7120457.png" alt="ke-katiba-digest logo" width="180" height="180" style="border-radius: 20%;" />
+</p>
 
-A Python processing pipeline for extracting, structuring, and serializing legal text from the **Constitution of Kenya (2010)** and associated statutory booklet PDFs into structured JSON and SQLite formats.
+<h1 align="center">ke-katiba-digest</h1>
+
+<p align="center">
+  <strong>A modern, high-performance extraction and structuring pipeline for the Constitution of Kenya (2010).</strong>
+</p>
+
+<p align="center">
+  <a href="#architecture--data-flow">Architecture</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#usage-guide">Usage</a> •
+  <a href="#code-quality--engineering-standards">Standards</a> •
+  <a href="#schema-overview">Schema</a>
+</p>
+
+---
+
+## Overview
+
+`ke-katiba-digest` converts raw, multi-column statutory PDF documents into clean, structured AST representations. It parses legal hierarchies (**Chapter → Part → Article → Clause**) and serializes them into production-ready **JSON** and **SQLite** databases for downstream legal tech applications, search engines, and LLM indexing.
 
 ---
 
@@ -59,7 +79,7 @@ ke-katiba-digest/
 
 ## Code Quality & Engineering Standards
 
-Standard Python 3.10+ engineering patterns, as exemplified in `test_parser.py`, expected in codebase:
+The codebase is engineered around standard Python 3.10+ production patterns, as benchmarked in `test_parser.py` (continued refactoring in progress to ensure full coverage):
 
 * **Structured Logging over Bare Print**: All modules use `logging.getLogger(__name__)` with configurable levels (`--log-level DEBUG|INFO|WARNING|ERROR`).
 * **Strong Type Annotations & Dataclasses**: Immutable objects defined via `@dataclass(frozen=True)` and strict type hints (`Path`, `tuple`, `list[str]`, `list[str] | None`).
