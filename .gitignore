@@ -1,6 +1,13 @@
 data/*.log
 data/*.md
-output/
+
+# Ignore contents of output directory
+output/*
+
+# Re-include specific build artifacts
+!output/constitution_kenya_2010.db
+!output/constitution_kenya_2010.json
+
 .vscode/
 *.log
 .DS_Store
