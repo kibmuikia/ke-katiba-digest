@@ -1,5 +1,6 @@
 data/*.log
 data/*.md
+data/*.bak
 
 # Ignore contents of output directory
 output/*
